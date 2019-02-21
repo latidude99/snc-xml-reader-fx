@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<UKHOCatalogueFile SchemaVersion="98.943.982">
+    <BaseFileMetadata>
+        <MD_FileIdentifier>45643563</MD_FileIdentifier>
+        <MD_CharacterSet></MD_CharacterSet>
+        <MD_PointOfContact>
+            <ResponsibleParty>
+                <organisationName>The United Kingdom Hydrographic Office</organisationName>
+                <contactInfo>
+                    <fax>+44 (0)1823 284077</fax>
+                    <phone>+44 (0)1823 337900</phone>
+                    <address>
+                        <deliveryPoint>Admiralty Way</deliveryPoint>
+                        <city>Taunton</city>
+                        <administrativeArea>IMT</administrativeArea>
+                        <postalCode>TA1 2DN</postalCode>
+                        <country>United Kingdom</country>
+                        <electronicMailAddress>helpdesk@ukho.gov.uk</electronicMailAddress>
+                    </address>
+                </contactInfo>
+            </ResponsibleParty>
+        </MD_PointOfContact>
+        <MD_DateStamp>2018-11-11</MD_DateStamp>
+    </BaseFileMetadata>
+    <Products>
+        <Paper>
+            <StandardNavigationChart>
+                <ShortName>1017</ShortName>
+                <Metadata>
+                    <DatasetTitle>Approaches to Dakar  Baie de Goree</DatasetTitle>
+                    <Scale>25000</Scale>
+                    <GeographicLimit>
+                        <Polygon>
+                            <Position latitude="14.5" longitude="-17.93"/>
+                            <Position latitude="15.1" longitude="-14.87"/>
+                            <Position latitude="24.8" longitude="-16.32"/>
+                            <Position latitude="34.1" longitude="-18.45"/>
+                            <Position latitude="16.6" longitude="-20.78"/>
+                            <Position latitude="17.4" longitude="-21.23"/>
+                        </Polygon>
+                    </GeographicLimit>
+                    <Status>
+                        <ChartStatus date="2015-02-14">Edition</ChartStatus>
+                    </Status>
+                    <ChartID>2345</ChartID>
+                    <ChartNumber>2345</ChartNumber>
+                    <ChartInternationalNumber>1993</ChartInternationalNumber>
+                    <ChartNewEditionDate>2009-03-05</ChartNewEditionDate>
+                    <Panel>
+                        <PanelAreaName></PanelAreaName>
+                        <PanelID></PanelID>
+                        <PanelName></PanelName>
+                        <PanelScale></PanelScale>
+                    </Panel>
+                    <NoticesToMariners>
+                        <Year>2017</Year>
+                        <Week>23</Week>
+                        <Number>2323</Number>
+                        <Type>ChartUpdate</Type>
+                    </NoticesToMariners>
+                    <NoticesToMariners>
+                        <Year>2018</Year>
+                        <Week>45</Week>
+                        <Number>2456</Number>
+                        <Type>ChartUpdate</Type>
+                    </NoticesToMariners>
+                    <NoticesToMariners>
+                        <Year>2019</Year>
+                        <Week>11</Week>
+                        <Number>2457</Number>
+                        <Type>ChartUpdate</Type>
+                    </NoticesToMariners>
+                    <EditionNumber></EditionNumber>
+                    <LastNMNumber>4224\2016</LastNMNumber>
+                    <LastNMDate>32-2016</LastNMDate>
+                    <PublicationDate>2009-03-05</PublicationDate>
+                </Metadata>
+            </StandardNavigationChart>
+            <StandardNavigationChart>
+                <Metadata>
+                    <DatasetTitle>Golfo de California</DatasetTitle>
+                    <Status>
+                        <ChartStatus date="2019-12-24">Edition</ChartStatus>
+                    </Status>
+                    <ChartID>1017</ChartID>
+                    <ChartNumber>1017</ChartNumber>
+                    <ChartNewEditionDate>2018-09-13</ChartNewEditionDate>
+                    <Panel>
+                        <PanelAreaName>A</PanelAreaName>
+                        <PanelID>1</PanelID>
+                        <PanelName>A</PanelName>
+                        <PanelScale>750000</PanelScale>
+                        <Polygon>
+                            <Position latitude="14.5" longitude="-17.93"/>
+                            <Position latitude="15.1" longitude="-14.87"/>
+                            <Position latitude="24.8" longitude="-16.32"/>
+                            <Position latitude="34.1" longitude="-18.45"/>
+                            <Position latitude="16.6" longitude="-20.78"/>
+                            <Position latitude="17.4" longitude="-21.23"/>
+                        </Polygon>
+                    </Panel>
+                    <Panel>
+                        <PanelAreaName>B</PanelAreaName>
+                        <PanelID>2</PanelID>
+                        <PanelName>B</PanelName>
+                        <PanelScale>550000</PanelScale>
+                        <Polygon>
+                            <Position latitude="14.5" longitude="-17.93"/>
+                            <Position latitude="15.1" longitude="-14.87"/>
+                            <Position latitude="24.8" longitude="-16.32"/>
+                            <Position latitude="34.1" longitude="-18.45"/>
+                        </Polygon>
+                    </Panel>
+                    <NoticesToMariners>
+                        <Year>2017</Year>
+                        <Week>23</Week>
+                        <Number>2323</Number>
+                        <Type>ChartUpdate</Type>
+                    </NoticesToMariners>
+                    <NoticesToMariners>
+                        <Year>2018</Year>
+                        <Week>45</Week>
+                        <Number>2456</Number>
+                        <Type>ChartUpdate</Type>
+                    </NoticesToMariners>
+                    <NoticesToMariners>
+                        <Year>2019</Year>
+                        <Week>11</Week>
+                        <Number>2457</Number>
+                        <Type>ChartUpdate</Type>
+                    </NoticesToMariners>
+                    <NoticesToMariners>
+                        <Year>2018</Year>
+                        <Week>53</Week>
+                        <Number>2326</Number>
+                        <Type>ChartUpdate</Type>
+                    </NoticesToMariners>
+                    <NoticesToMariners>
+                        <Year>2018</Year>
+                        <Week>55</Week>
+                        <Number>2465</Number>
+                        <Type>Temporary</Type>
+                    </NoticesToMariners>
+                    <NoticesToMariners>
+                        <Year>2019</Year>
+                        <Week>01</Week>
+                        <Number>2498</Number>
+                        <Type>ChartUpdate</Type>
+                    </NoticesToMariners>
+                    <EditionNumber></EditionNumber>
+                    <LastNMNumber>5937\2019</LastNMNumber>
+                    <LastNMDate>49-2018</LastNMDate>
+                    <PublicationDate>2015-09-13</PublicationDate>
+                </Metadata>
+            </StandardNavigationChart>
+        </Paper>
+    </Products>
+</UKHOCatalogueFile>

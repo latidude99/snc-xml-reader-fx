@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UKHOCatalogueFile SchemaVersion="2.0.4.6">
+  <BaseFileMetadata>
+    <MD_FileIdentifier>2019041</MD_FileIdentifier>
+    <MD_CharacterSet></MD_CharacterSet>
+    <MD_PointOfContact>
+      <ResponsibleParty>
+        <organisationName>The United Kingdom Hydrographic Office</organisationName>
+        <contactInfo>
+          <fax>+44 (0)1823 284077</fax>
+          <phone>+44 (0)1823 337900</phone>
+          <address>
+            <deliveryPoint>Admiralty Way</deliveryPoint>
+            <city>Taunton</city>
+            <administrativeArea>IMT</administrativeArea>
+            <postalCode>TA1 2DN</postalCode>
+            <country>United Kingdom</country>
+            <electronicMailAddress>helpdesk@ukho.gov.uk</electronicMailAddress>
+          </address>
+        </contactInfo>
+      </ResponsibleParty>
+    </MD_PointOfContact>
+    <MD_DateStamp>2019-01-22</MD_DateStamp>
+    <MD_StandardName></MD_StandardName>
+    <MD_StandardVersion></MD_StandardVersion>
+  </BaseFileMetadata>
+  <Products>
+    <Paper>
+	  <StandardNavigationChart>
+        <ShortName>1000</ShortName>
+        <Metadata>
+          <DatasetTitle>Approaches to Dakar  Baie de Goree</DatasetTitle>
+          <Scale>50000</Scale>
+          <GeographicLimit>
+            <Polygon>
+              <Position latitude="14.5" longitude="-17.76" />
+              <Position latitude="14.83837" longitude="-17.76" />
+              <Position latitude="14.83837" longitude="-17.25005" />
+              <Position latitude="14.5" longitude="-17.25005" />
+              <Position latitude="14.5" longitude="-17.76" />
+            </Polygon>
+          </GeographicLimit>
+          <Folio>
+            <ID>1000</ID>
+          </Folio>
+          <SAP_IPN>10699</SAP_IPN>
+          <CatalogueNumber>1000</CatalogueNumber>
+          <Status>
+            <ChartStatus date="2009-03-05">Edition</ChartStatus>
+          </Status>
+          <Unit>
+            <ID>1000</ID>
+          </Unit>
+          <ChartID>1000</ChartID>
+          <ChartNumber>1000</ChartNumber>
+          <ChartInternationalNumber>1993</ChartInternationalNumber>
+          <ChartNewEditionDate>2009-03-05</ChartNewEditionDate>
+          <Panel>
+            <PanelID></PanelID>
+            <PanelAreaName></PanelAreaName>
+            <PanelName></PanelName>
+            <PanelScale></PanelScale>
+          </Panel>
+          <NoticesToMariners>
+            <Year>2009</Year>
+            <Week>43</Week>
+            <Number>5638</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2012</Year>
+            <Week>48</Week>
+            <Number>5383</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2013</Year>
+            <Week>18</Week>
+            <Number>1962</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2015</Year>
+            <Week>22</Week>
+            <Number>2744</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2015</Year>
+            <Week>26</Week>
+            <Number>3341</Number>
+            <Type>Temporary</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2015</Year>
+            <Week>28</Week>
+            <Number>3602</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2015</Year>
+            <Week>33</Week>
+            <Number>4219</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2016</Year>
+            <Week>8</Week>
+            <Number>1057</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2016</Year>
+            <Week>32</Week>
+            <Number>4224</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <EditionNumber></EditionNumber>
+          <LastNMNumber>4224\2016</LastNMNumber>
+          <LastNMDate>32-2016</LastNMDate>
+          <PublicationDate>2009-03-05</PublicationDate>
+        </Metadata>
+      </StandardNavigationChart> 
+      <StandardNavigationChart>
+        <ShortName>1017</ShortName>
+        <Metadata>
+          <DatasetTitle>Golfo de California</DatasetTitle>
+          <GeographicLimit></GeographicLimit>
+          <Folio>
+            <ID>1017</ID>
+          </Folio>
+          <SAP_IPN>14407</SAP_IPN>
+          <CatalogueNumber>1017</CatalogueNumber>
+          <Status>
+            <ChartStatus date="2018-09-13">Edition</ChartStatus>
+          </Status>
+          <Unit>
+            <ID>1017</ID>
+          </Unit>
+          <ChartID>1017</ChartID>
+          <ChartNumber>1017</ChartNumber>
+          <ChartNewEditionDate>2018-09-13</ChartNewEditionDate>
+          <Panel>
+            <PanelID>1</PanelID>
+            <PanelAreaName>A</PanelAreaName>
+            <PanelName>A</PanelName>
+            <PanelScale>750000</PanelScale>
+            <Polygon>
+              <Position latitude="22.75013" longitude="-111.22808" />
+              <Position latitude="28.66682" longitude="-111.22788" />
+              <Position latitude="28.66715" longitude="-110.92842" />
+              <Position latitude="23.87808" longitude="-106.7186" />
+              <Position latitude="23.8782" longitude="-106.25042" />
+              <Position latitude="22.75" longitude="-106.25" />
+              <Position latitude="22.75013" longitude="-111.22808" />
+            </Polygon>
+          </Panel>
+          <Panel>
+            <PanelID>2</PanelID>
+            <PanelAreaName>B</PanelAreaName>
+            <PanelName>B</PanelName>
+            <PanelScale>750000</PanelScale>
+            <Polygon>
+              <Position latitude="30.22087" longitude="-115.75008" />
+              <Position latitude="31.75007" longitude="-115.75017" />
+              <Position latitude="31.75008" longitude="-110.77257" />
+              <Position latitude="25.5001" longitude="-110.77255" />
+              <Position latitude="25.5" longitude="-111.1997" />
+              <Position latitude="30.22087" longitude="-115.40957" />
+              <Position latitude="30.22087" longitude="-115.75008" />
+            </Polygon>
+          </Panel>
+          <NoticesToMariners>
+            <Year>2018</Year>
+            <Week>40</Week>
+            <Number>4759</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2018</Year>
+            <Week>49</Week>
+            <Number>5937</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <EditionNumber></EditionNumber>
+          <LastNMNumber>5937\2018</LastNMNumber>
+          <LastNMDate>49-2018</LastNMDate>
+          <PublicationDate>2018-09-13</PublicationDate>
+        </Metadata>
+      </StandardNavigationChart>
+      <StandardNavigationChart>
+        <ShortName>1018</ShortName>
+        <Metadata>
+          <DatasetTitle>Approaches to Stretto di Messina</DatasetTitle>
+          <Scale>125000</Scale>
+          <GeographicLimit>
+            <Polygon>
+              <Position latitude="37.5498" longitude="15.14665" />
+              <Position latitude="38.65333" longitude="15.14665" />
+              <Position latitude="38.65333" longitude="16.07275" />
+              <Position latitude="37.5498" longitude="16.07275" />
+              <Position latitude="37.5498" longitude="15.14665" />
+            </Polygon>
+          </GeographicLimit>
+          <Folio>
+            <ID>1018</ID>
+          </Folio>
+          <SAP_IPN>10711</SAP_IPN>
+          <CatalogueNumber>1018</CatalogueNumber>
+          <Status>
+            <ChartStatus date="2013-07-18">Edition</ChartStatus>
+          </Status>
+          <Unit>
+            <ID>1018</ID>
+          </Unit>
+          <ChartID>1018</ChartID>
+          <ChartNumber>1018</ChartNumber>
+          <ChartNewEditionDate>2013-07-18</ChartNewEditionDate>
+          <Panel>
+            <PanelID></PanelID>
+            <PanelAreaName></PanelAreaName>
+            <PanelName></PanelName>
+            <PanelScale></PanelScale>
+          </Panel>
+          <NoticesToMariners>
+            <Year>2014</Year>
+            <Week>18</Week>
+            <Number>1938</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2014</Year>
+            <Week>28</Week>
+            <Number>3076</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2015</Year>
+            <Week>14</Week>
+            <Number>1777</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2015</Year>
+            <Week>41</Week>
+            <Number>5232</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2015</Year>
+            <Week>45</Week>
+            <Number>5668</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2015</Year>
+            <Week>47</Week>
+            <Number>5984</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2016</Year>
+            <Week>6</Week>
+            <Number>835</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2017</Year>
+            <Week>25</Week>
+            <Number>2957</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2017</Year>
+            <Week>28</Week>
+            <Number>3296</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2018</Year>
+            <Week>9</Week>
+            <Number>1169</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2018</Year>
+            <Week>25</Week>
+            <Number>2986</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <NoticesToMariners>
+            <Year>2018</Year>
+            <Week>33</Week>
+            <Number>3969</Number>
+            <Type>ChartUpdate</Type>
+          </NoticesToMariners>
+          <EditionNumber></EditionNumber>
+          <LastNMNumber>3969\2018</LastNMNumber>
+          <LastNMDate>33-2018</LastNMDate>
+          <PublicationDate>2013-07-18</PublicationDate>
+        </Metadata>
+      </StandardNavigationChart>
+	</Paper>
+  </Products>
+</UKHOCatalogueFile>
