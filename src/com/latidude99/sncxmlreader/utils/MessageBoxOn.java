@@ -18,7 +18,7 @@
 *  or write to: latidude99@gmail.com
 */
 
-package com.latidude99.sncxmlreader.app;
+package com.latidude99.sncxmlreader.utils;
 
 import javafx.stage.*;
 import javafx.scene.*;
