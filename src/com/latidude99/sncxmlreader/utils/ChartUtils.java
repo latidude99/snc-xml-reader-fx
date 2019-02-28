@@ -24,7 +24,7 @@ public class ChartUtils {
 		
 	public String displayChartRange(Map<String, StandardNavigationChart> charts, String input, boolean fullInfo) {
 		StringBuilder sb = new StringBuilder();
-		Set<String> numbersSearched = FormatUtils.stringToNumbers(input);
+		Set<String> numbersSearched = FormatUtils.parseInput(input);
 		Map<String, StandardNavigationChart> chartsFound = findCharts(charts, numbersSearched);
         
 		sb.append(printSearchSummary(chartsFound, numbersSearched));
