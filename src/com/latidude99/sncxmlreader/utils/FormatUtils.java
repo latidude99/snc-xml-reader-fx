@@ -75,7 +75,7 @@ public class FormatUtils {
 		return outputSet;
     }
 	
-	
+	// not used any longer, pareInput() used for numbers and strings combined
 	public static Set<String> parseInputNumbersOnly(String input) {
 //		String numbersAsString = "2, 4, 5,,67,7 6,32,3, 5,7-9, 8-17,15, 17, e9 0, 9-q9, 1 2-14";
 //		System.out.println("getUserDefinedId() ->");

@@ -1,13 +1,16 @@
 package com.latidude99.sncxmlreader.utils;
 
+import com.latidude99.sncxmlreader.model.Address;
 import com.latidude99.sncxmlreader.model.BaseFileMetadata;
 import com.latidude99.sncxmlreader.model.ContactInfo;
 
 public class Info {
+	public static String CATALOGUE_INFO_FULL;
+	
 	
 	public static String about() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Standard Navigation ChartUtils XML Reader (SncXmlReader) v.0.1 beta\r\n");
+		sb.append("Standard Navigation ChartUtils XML Reader (SncXmlReader) v.0.7 beta\r\n");
 		sb.append("--------------------------------------------------------------------------\r\n\n");
 		sb.append("The goal of SncXmlReader is to present a UKHO Standard Navigation ChartUtils catalogue\r\n"
 				+ "(available for registered eNavigator users to download in XML file format) \r\n"
@@ -30,7 +33,7 @@ public class Info {
 		
 		sb.append("Copyright (C) 2019  Piotr Czapik.\r\n" + 
 				"  author Piotr Czapik\r\n" + 
-				"  version 0.1 (beta)\r\n" + 
+				"  version 0.7 (beta)\r\n" + 
 				" \r\n" + 
 				"  SncXmlReader is free software: you can redistribute it and/or modify\r\n" + 
 				"  it under the terms of the GNU General Public License as published by\r\n" + 
@@ -88,19 +91,22 @@ public class Info {
 		ContactInfo contact = meta.getMD_PointOfContact().getResponsibleParty().getContactInfo();
 		StringBuilder sb = new StringBuilder();
 		
-		sb.append("UKHO Standard Navigation Charts Catalogue, loaded from XML file\n");
+		sb.append("UKHO Standard Navigation Charts Catalogue, loaded from https://enavigator.ukho.gov.uk/Download/snc_catalogue.xml  \n\n");
 		sb.append("Schema Version: " + schemaVersion);
 		sb.append("Catalogue Date: " + meta.getMD_DateStamp() + "\n");
 		sb.append("MD FileIdentifier: " + meta.getMD_FileIdentifier() + "\n");
 		sb.append("MD CharacterSet: " + meta.getMD_CharacterSet() + "\n");
-		sb.append("Organisation Name: " + meta.getMD_PointOfContact().getResponsibleParty().getOrganisationName() + "\n");
-		sb.append("contactInfo: " + "\n");
-		sb.append("     Fax: " + contact.getFax() + "\n");
-		sb.append("     Phone: " + contact.getPhone() + "\n");
-		sb.append("     Address: " + contact.getAddress() + "\n");
+		sb.append("Organisation Name: " + meta.getMD_PointOfContact().getResponsibleParty().getOrganisationName() + "\n\n");
+		sb.append("ContactInfo: " + "\n");
+		sb.append("        Fax: " + contact.getFax() + "\n");
+		sb.append("        Phone: " + contact.getPhone() + "\n");
+		sb.append("        Email: " + contact.getAddress().getElectronicMailAddress() + "\n\n");
+		sb.append("Address: " + contact.getAddress() + "\n");
 		sb.append("================================================= \n");
 		
-		return sb.toString();
+		CATALOGUE_INFO_FULL = sb.toString();
+		
+		return CATALOGUE_INFO_FULL;
 	}
 
 }

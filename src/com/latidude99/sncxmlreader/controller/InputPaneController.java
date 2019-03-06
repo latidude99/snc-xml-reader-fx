@@ -51,13 +51,8 @@ public class InputPaneController implements Initializable{
     private Line lineSeparator;
     @FXML
     private Button buttonCatInfo;
-    @FXML
-    private Hyperlink linkHelp;
-    @FXML
-    private Hyperlink linkAbout;
     
-    @FXML
-   
+    
     
 	public Label getLabelTitle() {
 		return labelTitle;
@@ -86,12 +81,7 @@ public class InputPaneController implements Initializable{
 	public Button getButtonCatInfo() {
 		return buttonCatInfo;
 	}
-	public Hyperlink getLinkHelp() {
-		return linkHelp;
-	}
-	public Hyperlink getLinkAbout() {
-		return linkAbout;
-	}
+	
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {

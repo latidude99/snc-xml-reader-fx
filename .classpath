@@ -3,5 +3,23 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="E:/__Java_data/_external_libraries/Cmmons IO/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="E:/__Java_data/_external_libraries/Cmmons IO/commons-io-2.6-bin.zip"/>
+	<classpathentry kind="lib" path="E:/__Java_data/_external_libraries/Cmmons IO/commons-io-2.6-javadoc.jar"/>
+	<classpathentry kind="lib" path="E:/__Java_data/_external_libraries/Cmmons IO/commons-io-2.6-sources.jar"/>
+	<classpathentry kind="lib" path="E:/__Java_data/_external_libraries/Cmmons IO/commons-io-2.6-tests.jar"/>
+	<classpathentry kind="lib" path="E:/__Java_data/_external_libraries/Cmmons IO/commons-io-2.6-test-sources.jar"/>
+	<classpathentry kind="lib" path="E:/__Java_data/_external_libraries/JSoup/jsoup-1.10.3.jar"/>
+	<classpathentry kind="lib" path="E:/__Java_data/_external_libraries/HttpClient/httpcomponents-client-4.5.3/lib/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="E:/__Java_data/_external_libraries/HttpClient/httpcomponents-client-4.5.3/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="E:/__Java_data/_external_libraries/HttpClient/httpcomponents-client-4.5.3/lib/fluent-hc-4.5.3.jar"/>
+	<classpathentry kind="lib" path="E:/__Java_data/_external_libraries/HttpClient/httpcomponents-client-4.5.3/lib/httpclient-4.5.3.jar"/>
+	<classpathentry kind="lib" path="E:/__Java_data/_external_libraries/HttpClient/httpcomponents-client-4.5.3/lib/httpclient-cache-4.5.3.jar"/>
+	<classpathentry kind="lib" path="E:/__Java_data/_external_libraries/HttpClient/httpcomponents-client-4.5.3/lib/httpclient-win-4.5.3.jar"/>
+	<classpathentry kind="lib" path="E:/__Java_data/_external_libraries/HttpClient/httpcomponents-client-4.5.3/lib/httpcore-4.4.6.jar"/>
+	<classpathentry kind="lib" path="E:/__Java_data/_external_libraries/HttpClient/httpcomponents-client-4.5.3/lib/httpmime-4.5.3.jar"/>
+	<classpathentry kind="lib" path="E:/__Java_data/_external_libraries/HttpClient/httpcomponents-client-4.5.3/lib/jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="E:/__Java_data/_external_libraries/HttpClient/httpcomponents-client-4.5.3/lib/jna-platform-4.1.0.jar"/>
+	<classpathentry kind="lib" path="E:/__Java_data/_external_libraries/Nitrite/nitrite-3.1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

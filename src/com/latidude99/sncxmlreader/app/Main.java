@@ -30,12 +30,14 @@ import javafx.scene.Scene;
 
 public class Main extends Application {
 	public static void main(String[] args) {
+		System.setProperty("sun.net.http.allowRestrictedHeaders", "true");
 		launch(args);
 	}
 	
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		final String appName = "Standard Navigation Charts XML Reader v0.1";
+		
 			Parent parent = (Parent) FXMLLoader.load(getClass().getResource("/com/latidude99/sncxmlreader/pane/MainPane.fxml"));
 			Scene scene = new Scene(parent);
 			primaryStage.setScene(scene);

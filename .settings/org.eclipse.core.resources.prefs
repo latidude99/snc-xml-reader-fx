@@ -1,12 +1,15 @@
 eclipse.preferences.version=1
 encoding//src/com/latidude99/sncxmlreader/app=UTF-8
+encoding//src/com/latidude99/sncxmlreader/controller/CataloguePaneController.java=UTF-8
 encoding//src/com/latidude99/sncxmlreader/controller/ContentPaneController.java=UTF-8
 encoding//src/com/latidude99/sncxmlreader/controller/InputPaneController.java=UTF-8
-encoding//src/com/latidude99/sncxmlreader/controller/MainController.java=UTF-8
-encoding//src/com/latidude99/sncxmlreader/controller/MainController_original.java=UTF-8
+encoding//src/com/latidude99/sncxmlreader/controller/MainPaneController.java=UTF-8
+encoding//src/com/latidude99/sncxmlreader/controller/MainPaneController_original.java=UTF-8
 encoding//src/com/latidude99/sncxmlreader/controller/SearchPaneController.java=UTF-8
+encoding//src/com/latidude99/sncxmlreader/controller/WebPaneController.java=UTF-8
 encoding//src/com/latidude99/sncxmlreader/pane/style.css=UTF-8
 encoding//src/com/latidude99/sncxmlreader/utils/MessageBox.java=UTF-8
 encoding//src/com/latidude99/sncxmlreader/utils/MessageBoxOn.java=UTF-8
+encoding//src/com/latidude99/sncxmlreader/utils/ProgressBox.java=UTF-8
 encoding/<project>=UTF-8
 encoding/src=Cp1252

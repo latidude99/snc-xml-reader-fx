@@ -43,12 +43,12 @@
                         <Insets right="15.0" />
                      </HBox.margin>
                   </Button>
-                  <CheckBox id="chexbox-info" fx:id="checkboxInfo" mnemonicParsing="false" text="  Full Info">
+                  <CheckBox id="chexbox-info" fx:id="checkboxInfo" mnemonicParsing="false" text="  Full Chart Info">
                      <HBox.margin>
                         <Insets left="5.0" right="10.0" top="5.0" />
                      </HBox.margin>
                   </CheckBox>
-                  <TextField id="text-search-chart" fx:id="textSearchChart" prefHeight="25.0" prefWidth="325.0" promptText="search by chart numbers (1017, 2453, 4000-4006)">
+                  <TextField id="text-search-chart" fx:id="textSearchChart" prefHeight="25.0" prefWidth="295.0" promptText="search by chart numbers (1017, 2453, 4000-4006)">
                      <HBox.margin>
                         <Insets left="10.0" />
                      </HBox.margin></TextField>

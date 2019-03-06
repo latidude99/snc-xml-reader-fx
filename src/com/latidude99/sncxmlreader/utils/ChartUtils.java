@@ -13,9 +13,26 @@ import com.latidude99.sncxmlreader.model.UKHOCatalogueFile;
 
 public class ChartUtils {
 	
-	public Map<String, StandardNavigationChart> getCharts(UKHOCatalogueFile catalogue){
+	private static UKHOCatalogueFile ukhoCatalogueFile;
+	
+	public UKHOCatalogueFile getUkhoCatalogueFile() {
+		return ukhoCatalogueFile;
+	}
+	public static void setUkhoCatalogueFile(UKHOCatalogueFile catalogue) {
+		ukhoCatalogueFile = catalogue;
+	}
+
+	public Map<String, StandardNavigationChart> getCharts(){
 		Map<String, StandardNavigationChart> charts = new TreeMap<String, StandardNavigationChart>();
-		for(StandardNavigationChart chart : catalogue.getProducts().getPaper().getCharts())
+		for(StandardNavigationChart chart : ukhoCatalogueFile.getProducts().getPaper().getCharts())
+			charts.put(chart.getMetadata().getCatalogueNumber(), chart);
+		
+		return charts;
+	}
+	
+	public Map<String, StandardNavigationChart> getCharts(UKHOCatalogueFile ukhoCatalogueFile){
+		Map<String, StandardNavigationChart> charts = new TreeMap<String, StandardNavigationChart>();
+		for(StandardNavigationChart chart : ukhoCatalogueFile.getProducts().getPaper().getCharts())
 			charts.put(chart.getMetadata().getCatalogueNumber(), chart);
 		
 		return charts;

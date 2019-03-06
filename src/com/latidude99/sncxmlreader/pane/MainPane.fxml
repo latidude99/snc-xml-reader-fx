@@ -35,13 +35,14 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500.0" minWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.latidude99.sncxmlreader.controller.MainController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500.0" minWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.latidude99.sncxmlreader.controller.MainPaneController">
    
    <top>
 		<VBox BorderPane.alignment="CENTER">
 	         <children>
 			      <fx:include fx:id="inputPane" source="inputPane.fxml" />
 			      <fx:include fx:id="searchPane" source="searchPane.fxml" />
+			      <fx:include fx:id="cataloguePane" source="cataloguePane.fxml" />
 			</children>
 		</VBox>
    </top>

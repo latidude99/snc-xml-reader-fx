@@ -60,12 +60,12 @@ public class Address {
 	}
 	@Override
 	public String toString() {
-		return "     Delivery Point: " + deliveryPoint + 
-				"\n City: " + city + 
-				"\n Administrative Area: " + administrativeArea + 
-				"\n Postal Code: " + postalCode + 
-				"\n Country: " + country	+ 
-				"\n Email: " + electronicMailAddress;
+		return  "\n         Delivery Point: " + deliveryPoint + 
+				"\n         City: " + city + 
+				"\n         Administrative Area: " + administrativeArea + 
+				"\n         Postal Code: " + postalCode + 
+				"\n         Country: " + country;
+				
 	}
 	
 	
