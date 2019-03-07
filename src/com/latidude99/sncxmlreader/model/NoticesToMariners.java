@@ -32,6 +32,6 @@ public class NoticesToMariners {
     }
     @Override
     public String toString() {
-        return "     notice -- Year: " + year + ", " + "Week: " + week + ", " + "Number: " + number + ", " +"Type: " + type;
+        return "           Year: " + year + ", " + "Week: " + week + ", " + "Number: " + number + ", " +"Type: " + type;
     }
 }

@@ -1,14 +1,14 @@
-/**Copyright (C) 2017  Piotr Czapik.
+/**Copyright (C) 2019  Piotr Czapik.
 * @author Piotr Czapik
-* @version 2.0
+* @version 1.0
 * 
-*  This file is part of SncXmlReader.
-*  Subs Converter is free software: you can redistribute it and/or modify
+*  This file is part of SncXmlReaderFX.
+*  SncXmlReaderFX is free software: you can redistribute it and/or modify
 *  it under the terms of the GNU General Public License as published by
 *  the Free Software Foundation, either version 3 of the License, or
 *  (at your option) any later version.
 * 
-*  SncXmlReader is distributed in the hope that it will be useful,
+*  SncXmlReaderFX is distributed in the hope that it will be useful,
 *  but WITHOUT ANY WARRANTY; without even the implied warranty of
 *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 *  GNU General Public License for more details.
@@ -24,6 +24,8 @@ import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
@@ -64,6 +66,7 @@ import javafx.stage.FileChooser;
 
 
 public class MainPaneController implements Initializable{
+	private static final String FILE_NAME = "snc_catalogue.xml";
 	
 	@FXML
 	InputPaneController inputPaneController;
@@ -79,8 +82,7 @@ public class MainPaneController implements Initializable{
  
     private File fileSave = null;
     private File fileLoad = null;
-     
-    
+       
     Charset charset;   
     private FileChooser fileChooser = new FileChooser();
     UKHOCatalogueFile ukhoCatalogueFile;
@@ -90,6 +92,7 @@ public class MainPaneController implements Initializable{
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMM-yyyy HH.mm");
     ChartUtils chartUtils;
     Task<Void> loadTask;
+    File fileTmp;
     
     TextArea textResult;
     Button buttonClearSearch;
@@ -138,27 +141,51 @@ public class MainPaneController implements Initializable{
 	}
 	
 	public void startup() {
+		fileTmp = new File(".");
 		chartUtils = new ChartUtils();
 		checkboxInfo.setSelected(false);
-		try {
-			File file = new File("snc_catalogue.xml");
-	        JAXBContext jaxbContext;
-			jaxbContext = JAXBContext.newInstance(UKHOCatalogueFile.class);
-			Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-	        ukhoCatalogueFile = (UKHOCatalogueFile) unmarshaller.unmarshal(file);
-	        schemaVersion = ukhoCatalogueFile.getSchemaVersion();
-	        meta = ukhoCatalogueFile.getBaseFileMetadata();
-	        textResult.setText(Info.catalogueFull(meta, schemaVersion));
-			labelLoadedDate.setText(Info.catalogueBasic(meta, schemaVersion));
-			setDateLabels(meta);
-			standardCharts = chartUtils.getCharts(ukhoCatalogueFile);
-			ukhoCatalogueFile = null;
-		} catch (JAXBException e) {
-			textResult.setText("Catalogue not loaded. Please load the file manually \n"
-					+ "or \n"
-					+ "copy the catalogue file into the application folder and start SncXmlReader again");
-//			e.printStackTrace();
+		
+		loadTask = new LoadTask(FILE_NAME);
+		loadTask.addEventHandler(WorkerStateEvent.WORKER_STATE_SUCCEEDED, 
+										new EventHandler<WorkerStateEvent>() {
+		@Override
+			public void handle(WorkerStateEvent t) {
+				ukhoCatalogueFile = ChartUtils.getUkhoCatalogueFile();
+				schemaVersion = ukhoCatalogueFile.getSchemaVersion();
+		        meta = ukhoCatalogueFile.getBaseFileMetadata();
+		        textResult.setText(Info.catalogueFull(meta, schemaVersion));
+				labelLoadedDate.setText(Info.catalogueBasic(meta, schemaVersion));
+				setDateLabels(meta);
+				standardCharts = ChartUtils.getCharts();
+				ukhoCatalogueFile = null;
+//				MessageBox.show("Catalogue loaded successfully.", "Info");
+			}
+		});
+		loadTask.addEventHandler(WorkerStateEvent.WORKER_STATE_FAILED, 
+										new EventHandler<WorkerStateEvent>() {
+			@Override
+				public void handle(WorkerStateEvent t) {
+				textResult.setText("Catalogue not loaded. Please load the file manually \n"
+						+ "or \n"
+						+ "copy the catalogue file into the application folder and start SncXmlReader again\n"
+						+ "or \n"
+						+ "download the latest catalogue file from UKHO website.");
+				}
+			});
+		
+		String dots = "Wait for catalog file to be loaded............................................";
+		while(true) {
+			textResult.setText(dots);
+			dots = dots + ".....";
+			System.out.println(dots);
+			if(!loadTask.isRunning())
+				break;
 		}
+	
+		Thread thread = new Thread(loadTask);
+        thread.setDaemon(true);
+        thread.start();
+		
 	}
 		
 		
@@ -168,28 +195,25 @@ public class MainPaneController implements Initializable{
 			@Override
 			public void handle(ActionEvent e){		
 				
-				startup();
-
-/*				loadTask = new LoadTask();
-//				progressIndicator.setVisible(true);
-//				labelDownloaded.setVisible(true);
-//				progressIndicator.progressProperty().bind(downloadTask.progressProperty());
-//				labelDownloaded.textProperty().bind(downloadTask.messageProperty());
-				
+				loadTask = new LoadTask(FILE_NAME);
 				loadTask.addEventHandler(WorkerStateEvent.WORKER_STATE_SUCCEEDED, 
-	                       						new EventHandler<WorkerStateEvent>() {
-	                           @Override
-	                           public void handle(WorkerStateEvent t) {
-//	                        	   labelDownloaded.textProperty().unbind();
-//	                        	   labelDownloaded.setText("Download complete. Update catalog and close the browser window.");
-//	                        	   buttonUpdate.setVisible(true);
-	                        	   MessageBox.show("Catalogue updated successfully.", "Info");
-	                           }
-	                       });
+							new EventHandler<WorkerStateEvent>() {
+				@Override
+					public void handle(WorkerStateEvent t) {
+						ukhoCatalogueFile = ChartUtils.getUkhoCatalogueFile();
+						schemaVersion = ukhoCatalogueFile.getSchemaVersion();
+				        meta = ukhoCatalogueFile.getBaseFileMetadata();
+				        textResult.setText(Info.catalogueFull(meta, schemaVersion));
+						labelLoadedDate.setText(Info.catalogueBasic(meta, schemaVersion));
+						setDateLabels(meta);
+						standardCharts = ChartUtils.getCharts();
+						ukhoCatalogueFile = null;
+						MessageBox.show("Catalogue loaded successfully.", "Info");
+					}
+				});
 				Thread thread = new Thread(loadTask);
-	            thread.setDaemon(true);
-	            thread.start();
-*/
+		        thread.setDaemon(true);
+		        thread.start();
 	            
 			}
 		});
@@ -199,7 +223,8 @@ public class MainPaneController implements Initializable{
 			public void handle(ActionEvent e){
 				fileLoad = fileChooser.showOpenDialog(null);
 				fileChooser.setTitle("Load SNC Catalogue from XML File (.xml)");
-				fileChooser.setInitialDirectory(File.listRoots()[0]);
+//				fileChooser.setInitialDirectory(File.listRoots()[0]);
+				fileChooser.setInitialDirectory(fileTmp);
 				if(fileLoad != null){
 					pathLoadFile.setText(fileLoad.getAbsolutePath());
 				JAXBContext jaxbContext;
@@ -212,7 +237,7 @@ public class MainPaneController implements Initializable{
 			        textResult.setText(Info.catalogueFull(meta, schemaVersion));
 					labelLoadedDate.setText(Info.catalogueBasic(meta, schemaVersion));
 					setDateLabels(meta);
-					standardCharts = chartUtils.getCharts();
+					standardCharts = ChartUtils.getCharts();
 					ukhoCatalogueFile = null;
 				} catch (JAXBException exJAXB) {
 					MessageBox.show("Loading XML file unsuccessful", "Error");
@@ -227,16 +252,16 @@ public class MainPaneController implements Initializable{
 			@Override
 			public void handle(ActionEvent e){
 				fileChooser.setTitle("Choose location for saved search");
-				fileChooser.setInitialDirectory(File.listRoots()[0]);
+				fileChooser.setInitialDirectory(fileTmp);
 				if(fileLoad != null){
 					String name = fileLoad.getName();
 					fileChooser.setInitialFileName(name.substring(0, name.lastIndexOf(".")) + 
 							"_chart search_" + LocalDateTime.now().format(formatter)	+ ".txt");
 					fileSave = fileChooser.showSaveDialog(null);
-					//}
 					saveSearch(fileSave);
 				} else {
 					fileChooser.setInitialFileName("_chart search_" + LocalDateTime.now().format(formatter)	+ ".txt");
+					fileSave = fileChooser.showSaveDialog(null);
 					saveSearch(fileSave);
 				}
 				fileSave = null;
@@ -249,6 +274,7 @@ public class MainPaneController implements Initializable{
 			public void handle(ActionEvent event) {
 				if(meta != null && schemaVersion != null) {
 					labelLoadedDate.setText(Info.catalogueBasic(meta, schemaVersion));
+					setDateLabels(meta);
 					textResult.clear();
 					textResult.setText(Info.catalogueFull(meta, schemaVersion));	
 				} else {
@@ -320,48 +346,24 @@ public class MainPaneController implements Initializable{
 		LocalDate catalogueDate = LocalDate.parse(catalogueDateString, formatter);
 		LocalDate currentDate = LocalDate.now();
 		long daysBetween = Duration.between(catalogueDate.atStartOfDay(), currentDate.atStartOfDay()).toDays();
-		long daysToNew = daysBetween -7;
-		daysToNew = daysToNew > 0 ? daysToNew : -daysToNew;
-//		System.out.println(daysBetween + ", " + daysToNew);
-		String days = "";
-		if(daysBetween < 8) {
-			if(daysToNew == 0) {
-				days = "today";
-				labelLoadedDate.setTextFill(Color.LIGHTGREEN);
-				lineSeparator.setStroke(Color.LIGHTGREEN);
-			}
-			else if(daysToNew == 1) {
-				days = "tomorrow";
-				labelLoadedDate.setTextFill(Color.LIGHTGREEN);
-				lineSeparator.setStroke(Color.LIGHTGREEN);
-			}
-			else {
-				days = "in " + daysToNew +" days";
-				labelLoadedDate.setTextFill(Color.GREEN);
-				lineSeparator.setStroke(Color.GREEN);
-			}
+		if(daysBetween < 9) {
+			labelLoadedDate.setTextFill(Color.NAVY);
+			lineSeparator.setStroke(Color.NAVY);
+		
 			labelLoadedDate.setText("catalogue date: " + meta.getMD_DateStamp() + 
 					",  schema version: " + schemaVersion +
-					", next edition expected " + days);
+					", catalogue  " + daysBetween + " days old.                    ");
 		} else {
-			if(daysToNew > 30) {
-				days = daysToNew +" days";
-				labelLoadedDate.setTextFill(Color.RED);
-				lineSeparator.setStroke(Color.RED);
-			}
-			else if(daysToNew > 7) {
-				days = daysToNew +" days";
-				labelLoadedDate.setTextFill(Color.ORANGERED);
-				lineSeparator.setStroke(Color.ORANGERED);
-			}
+			labelLoadedDate.setTextFill(Color.RED);
+			lineSeparator.setStroke(Color.RED);
+			
 			labelLoadedDate.setText("catalogue date: " + meta.getMD_DateStamp() + 
 					",  schema version: " + schemaVersion +
-					", catalogue out-of-date " + days +" !");
+					", catalogue  " + daysBetween + " days old, check for update!");
 			
 		}		
 	}
 	
-
 	
 	private void saveSearch(File file) {
 		if(textResult.getText() == null){
@@ -378,6 +380,7 @@ public class MainPaneController implements Initializable{
 				MessageBox.show("File saved!", "Confirmation");
 			} catch (Exception ex){
 				MessageBox.show("File not saved", "Error");
+				ex.printStackTrace();
 			}
 	}
 	

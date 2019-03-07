@@ -15,14 +15,16 @@ public class ChartUtils {
 	
 	private static UKHOCatalogueFile ukhoCatalogueFile;
 	
-	public UKHOCatalogueFile getUkhoCatalogueFile() {
+	public static UKHOCatalogueFile getUkhoCatalogueFile() {
+		System.out.println("Getting ukhoCatalogueFile, schema version " + ukhoCatalogueFile.getBaseFileMetadata().getMD_DateStamp());
 		return ukhoCatalogueFile;
 	}
 	public static void setUkhoCatalogueFile(UKHOCatalogueFile catalogue) {
+		System.out.println("Setting ukhoCatalogueFile, schema version " + catalogue.getBaseFileMetadata().getMD_DateStamp());
 		ukhoCatalogueFile = catalogue;
 	}
 
-	public Map<String, StandardNavigationChart> getCharts(){
+	public static Map<String, StandardNavigationChart> getCharts(){
 		Map<String, StandardNavigationChart> charts = new TreeMap<String, StandardNavigationChart>();
 		for(StandardNavigationChart chart : ukhoCatalogueFile.getProducts().getPaper().getCharts())
 			charts.put(chart.getMetadata().getCatalogueNumber(), chart);
@@ -52,11 +54,9 @@ public class ChartUtils {
         			sb.append(displayChartFullInfo(chart));
 				else
 					sb.append(displayChartBasicInfo(chart));
- //       	sb.append("\n-------------------------------------------------\n");
         	}
         } else {
 			sb.append("\nNo charts have been found"); 
-//			sb.append("\n-------------------------------------------------\n");
         }
         return sb.toString();
 	}
@@ -161,7 +161,7 @@ public class ChartUtils {
       		}
       	}
       	sb.append("\n\nAdditional panels: " + additionalPanels + "\n");
-        sb.append("\n=================================================");
+        sb.append("\n------------------------------------------------");
         
         return sb.toString();
 	}
@@ -180,7 +180,7 @@ public class ChartUtils {
           		sb.append("\n     Panel Scale: " + scaleFormatted);
           		if(panel.getPolygon() != null && panel.getPolygon().getPositions() != null) {
 	          		for(Position position : panel.getPolygon().getPositions()) {
-	          			sb.append("\n          Position -- "
+	          			sb.append("\n          Position:    "
 	             									+ " latitude = " + position.getLatitude()
 	             									+ " longitude = " + position.getLongitude());
 	          		}

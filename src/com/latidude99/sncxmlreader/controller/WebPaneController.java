@@ -1,8 +1,11 @@
 package com.latidude99.sncxmlreader.controller;
 
+import java.io.File;
+import java.io.IOException;
 //import java.io.InputStreamReader;
 //import java.io.Reader;
 import java.net.URL;
+import java.nio.file.Files;
 //import java.net.URLConnection;
 import java.util.ResourceBundle;
 import java.util.concurrent.Executors;
@@ -72,6 +75,8 @@ public class WebPaneController implements Initializable{
 	@FXML
 	Button buttonUpdate;
 	@FXML
+	Button buttonDelete;
+	@FXML
 	MainPaneController mainPaneController;
 /*	
 	public MainPaneController getMainPaneController() {
@@ -97,6 +102,7 @@ public class WebPaneController implements Initializable{
     ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
     Task<Void> downloadTask;
     Task<Void> loadTask;
+    File file;
     
 
 	@Override
@@ -124,6 +130,7 @@ public class WebPaneController implements Initializable{
 		progressIndicator.setVisible(false);
 		labelDownloaded.setVisible(false);
 		buttonUpdate.setVisible(false);
+		buttonDelete.setVisible(false);
         webEngine = webView.getEngine();
 		webEngine.setJavaScriptEnabled(true);
 		
@@ -180,9 +187,7 @@ public class WebPaneController implements Initializable{
 		         if (newState == Worker.State.SUCCEEDED) {
 		        	 System.out.println("after login new URL: " + newURL);
 		        	 afterLogin();
-		         }
-//		         boolean loggedIn = downloader.loginCheck(UKHO_DOWNLOAD);
-		         
+		         }		         
 		     }
 		});
 		
@@ -197,12 +202,7 @@ public class WebPaneController implements Initializable{
 	             }else {
 	             	MessageBox.show("Please enter your Username  and Password.", "Info");
 	             }
-				 
-/*
-			        int delay = 5;
-			        scheduler.schedule(afterLoginTask, delay, TimeUnit.SECONDS);
-			        //scheduler.shutdown();
-*/			
+
 	         }
 			 
 	    });
@@ -213,7 +213,7 @@ public class WebPaneController implements Initializable{
 			public void handle(ActionEvent e){	
 				buttonDownload.setDisable(true);
 				buttonCancel.setDisable(false);
-				webView.setOpacity(0.5);
+				webView.setOpacity(0.3);
 								
 				downloadTask = new DownloadTask(UKHO_DOWNLOAD);
 				progressIndicator.setVisible(true);
@@ -226,17 +226,33 @@ public class WebPaneController implements Initializable{
 	                           @Override
 	                           public void handle(WorkerStateEvent t) {
 	                        	   labelDownloaded.textProperty().unbind();
-	                        	   labelDownloaded.setText("Download complete. Update catalog and close the browser window.");
+	                        	   labelDownloaded.setText("Download complete.");
 	                        	   buttonUpdate.setVisible(true);
 	                           }
 	                       });
+				downloadTask.addEventHandler(WorkerStateEvent.WORKER_STATE_FAILED, 
+   												new EventHandler<WorkerStateEvent>() {
+						       @Override
+						       public void handle(WorkerStateEvent t) {
+						    	   buttonDownload.setDisable(false);
+						    	   buttonCancel.setDisable(true);
+						    	   buttonUpdate.setVisible(false);
+						    	   webView.setOpacity(1);
+						    	   downloadTask.cancel(true);
+						    	   progressIndicator.progressProperty().unbind();
+						    	   labelDownloaded.textProperty().unbind();
+						    	   progressIndicator.setVisible(false);
+						    	   labelDownloaded.setVisible(false);
+						    	   
+						    	   file = new File("snc_catalogue.xml");
+						    	   buttonDelete.setText("Delete file: " + file.getName());
+						    	   buttonDelete.setVisible(true);
+						    	   MessageBox.show("Could not save the file. Delete the old file and try again. ", "Error");
+						       }
+						   });
 				Thread thread = new Thread(downloadTask);
 	            thread.setDaemon(true);
 	            thread.start();
-	            
-//				downloader.downloadXML(UKHO_DOWNLOAD);
-//				System.out.println(downloader.downloadXML(UKHO_DOWNLOAD));
-//				System.out.println("https://enavigator.ukho.gov.uk/Download?file=7223");	
 			}
 		});
 	    
@@ -246,7 +262,6 @@ public class WebPaneController implements Initializable{
 				buttonDownload.setDisable(false);
 				buttonCancel.setDisable(true);
 				buttonUpdate.setVisible(false);
-				buttonUpdate.setText("Close this window and Refresh Catalogue.");
 				webView.setOpacity(1);
 				downloadTask.cancel(true);
 				progressIndicator.progressProperty().unbind();
@@ -259,9 +274,43 @@ public class WebPaneController implements Initializable{
 	    buttonUpdate.setOnAction(new EventHandler<ActionEvent>(){
 			@Override
 			public void handle(ActionEvent e){	
-				buttonUpdate.setText("Close the window and refresh catalogue");
+//				buttonUpdate.setText("Close the browser window and refresh catalogue");
 				Stage stage = (Stage) buttonUpdate.getScene().getWindow();
 				stage.close();
+			}
+		});
+	    
+	    buttonDelete.setOnAction(new EventHandler<ActionEvent>(){
+			@Override
+			public void handle(ActionEvent e){	
+				try {
+					Files.delete(file.toPath());
+					buttonDownload.setDisable(false);
+					buttonCancel.setDisable(true);
+					buttonUpdate.setVisible(false);
+					webView.setOpacity(1);
+					downloadTask.cancel(true);
+					progressIndicator.progressProperty().unbind();
+					labelDownloaded.textProperty().unbind();
+					progressIndicator.setVisible(false);
+					labelDownloaded.setVisible(false);
+					buttonDelete.setVisible(false);
+					MessageBox.show("File deleted. Try downloading again. ", "Info");
+					 
+				} catch (IOException eio) {
+					eio.printStackTrace();
+					buttonDownload.setDisable(false);
+					buttonCancel.setDisable(true);
+					buttonUpdate.setVisible(false);
+					webView.setOpacity(1);
+					downloadTask.cancel(true);
+					progressIndicator.progressProperty().unbind();
+					labelDownloaded.textProperty().unbind();
+					progressIndicator.setVisible(false);
+					labelDownloaded.setVisible(false);
+					buttonDelete.setVisible(false);
+					MessageBox.show("AccessDenied. Change file name or delete it manually (" +file.getAbsolutePath() + ")" , "Error");
+				}
 			}
 		});
 	        
@@ -289,7 +338,6 @@ public class WebPaneController implements Initializable{
        	 System.out.println("file link: " + downloader.getUrlByIdJSOUP(UKHO_DOWNLOAD) + 
        			 " contains: "  + FILE_PARAM); 
        	 buttonDownload.setDisable(false);
-//       	 buttonCancel.setDisable(false);
        	 
        	 if(checkboxDontRememeber.isSelected()){
 	        	 try {

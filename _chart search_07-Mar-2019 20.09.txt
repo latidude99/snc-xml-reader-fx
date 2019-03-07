@@ -1,0 +1,319 @@
+Searching for 43 charts
+10  11  12  13  14     15  16  17  18  19     2  20  21  22  23     24  25  26  27  28  
+29  3  30  31  32     33  34  35  36  37     38  39  4  40  41     42  43  44  5  6  
+7  8  9  
+
+Found 29 charts
+11  12  13  14  15     16  18  2  20  26     27  28  29  3  30     31  32  33  34  35  
+36  38  39  40  44     5  6  7  9  
+-------------------------------------------------
+
+Chart Number: 11
+Chart International Number: 7304
+Chart Title: Jazireh-Ye Khark and Approaches
+Chart Status: Edition, Date: 2009-12-03
+
+Additional panels: 
+                         Panel 1 scale: 1:75000 (A  Jazireh-Ye Khark to Ganaveh)
+                         Panel 2 scale: 1:25000 (B  Jazireh-Ye Khark)
+
+------------------------------------------------
+
+Chart Number: 12
+Chart International Number: 7142
+Chart Scale: 1:350,000
+Chart Title: Al Aqabah to Duba and Ports on the Coast of Saudi Arabia
+Chart Status: Edition, Date: 2011-04-14
+
+Additional panels: 
+                         Panel 1 scale: 1:75000 (A  Ash Sharmah)
+                         Panel 2 scale: 1:150000 (B  Approaches to Duba)
+                         Panel 3 scale: 1:15000 (C  Port of Duba)
+                         Panel 4 scale: 1:10000 (D  Duba  Bulk Plant Terminal)
+
+------------------------------------------------
+
+Chart Number: 13
+Chart International Number: 
+Chart Scale: 1:35,000
+Chart Title: Approaches to Cebu Harbour
+Chart Status: Edition, Date: 2011-04-21
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 14
+Chart International Number: 
+Chart Scale: 1:12,500
+Chart Title: Cebu Harbour
+Chart Status: Edition, Date: 2013-01-17
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 15
+Chart International Number: 7154
+Chart Scale: 1:200,000
+Chart Title: Approaches to Jizan
+Chart Status: Edition, Date: 2014-07-17
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 16
+Chart International Number: 7155
+Chart Scale: 1:30,000
+Chart Title: Jizan
+Chart Status: Edition, Date: 2011-05-19
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 18
+Chart International Number: 
+Chart Scale: 1:5,000
+Chart Title: Falmouth Inner Harbour Including Penryn
+Chart Status: Edition, Date: 2014-02-20
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 2
+Chart International Number: 160
+Chart Scale: 1:1,500,000
+Chart Title: British Isles
+Chart Status: Edition, Date: 2015-07-23
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 20
+Chart International Number: 
+Chart Scale: 1:500,000
+Chart Title: Ile d'Ouessant to Pointe de la Coubre
+Chart Status: Edition, Date: 2018-08-23
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 26
+Chart International Number: 1724
+Chart Title: Harbours on the South Coast of Devon
+Chart Status: Edition, Date: 2014-04-17
+
+Additional panels: 
+                         Panel 1 scale: 1:12500 (A Tor Bay)
+                         Panel 2 scale: 1:7500 (B Brixham Harbour)
+                         Panel 3 scale: 1:7500 (C Teignmouth Harbour)
+                         Panel 4 scale: 1:4000 (D Torquay Harbour)
+
+------------------------------------------------
+
+Chart Number: 27
+Chart International Number: 
+Chart Scale: 1:25,000
+Chart Title: Bushehr
+Chart Status: Edition, Date: 2010-07-15
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 28
+Chart International Number: 
+Chart Scale: 1:12,500
+Chart Title: Salcombe Harbour
+Chart Status: Edition, Date: 2015-11-19
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 29
+Chart International Number: 
+Chart Scale: 1:25,000
+Chart Title: Porto de Santos
+Chart Status: Edition, Date: 2019-01-31
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 3
+Chart International Number: 7380
+Chart Scale: 1:360,000
+Chart Title: Chagos Archipelago
+Chart Status: Edition, Date: 2017-08-10
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 30
+Chart International Number: 1722
+Chart Scale: 1:12,500
+Chart Title: Plymouth Sound and Approaches
+Chart Status: Edition, Date: 2016-09-01
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 31
+Chart International Number: 1721
+Chart Title: Harbours on the South Coast of Cornwall
+Chart Status: Edition, Date: 2017-02-02
+
+Additional panels: 
+                         Panel 1 scale: 1:5000 (A Charlestown Harbour)
+                         Panel 2 scale: 1:7500 (B Par Harbour)
+                         Panel 3 scale: 1:6250 (C Fowey Harbour)
+                         Panel 4 scale: 1:15000 (D River Fowey Mixtow to Saint Winnow)
+                         Panel 5 scale: 1:15000 (E River Fowey Saint Winnow to Lostwithiel)
+
+------------------------------------------------
+
+Chart Number: 32
+Chart International Number: 1720
+Chart Scale: 1:12,500
+Chart Title: Falmouth to Truro
+Chart Status: Edition, Date: 2017-09-07
+
+Additional panels: 
+                         Panel 1 scale: 1:12500 (A Continuation of Truro River)
+                         Panel 2 scale: 1:20000 (B Continuation of Tresillian River)
+                         Panel 3 scale: 1:20000 (C Continuation of River Fal (Ruan Creek))
+
+------------------------------------------------
+
+Chart Number: 33
+Chart International Number: 
+Chart Scale: 1:10,000
+Chart Title: Gwadar Deep Water Port
+Chart Status: New, Date: 2009-03-05
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 34
+Chart International Number: 
+Chart Scale: 1:25,000
+Chart Title: Isles of Scilly
+Chart Status: Edition, Date: 2017-04-06
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 35
+Chart International Number: 
+Chart Scale: 1:30,000
+Chart Title: Scapa Flow and Approaches
+Chart Status: Edition, Date: 2010-12-16
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 36
+Chart International Number: 
+Chart Scale: 1:25,000
+Chart Title: Marsaxlokk and Approaches
+Chart Status: Edition, Date: 2016-08-25
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 38
+Chart International Number: 7019
+Chart Scale: 1:750,000
+Chart Title: Karachi to Ra's al Hadd
+Chart Status: Edition, Date: 2001-10-25
+
+Additional panels: 
+                         Panel 1 scale: 1:125000 (A  Gwadar)
+                         Panel 2 scale: 1:200000 (B  Pasni)
+                         Panel 3 scale: 1:125000 (C  Ormara)
+
+------------------------------------------------
+
+Chart Number: 39
+Chart International Number: 
+Chart Scale: 1:500,000
+Chart Title: Gulf of Kachchh to Sonmiani Bay
+Chart Status: Edition, Date: 2017-05-11
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 40
+Chart International Number: 7315
+Chart Scale: 1:12,500
+Chart Title: Karachi Harbour
+Chart Status: Edition, Date: 2013-03-07
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 44
+Chart International Number: 
+Chart Scale: 1:100,000
+Chart Title: Nose of Howth to Ballyquintin Point
+Chart Status: Edition, Date: 2016-08-18
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 5
+Chart International Number: 
+Chart Scale: 1:350,000
+Chart Title: `Abd Al Kuri to Suqutra (Socotra)
+Chart Status: Edition, Date: 2013-03-07
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 6
+Chart International Number: 
+Chart Scale: 1:750,000
+Chart Title: Gulf of Aden
+Chart Status: Edition, Date: 2018-01-04
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 7
+Chart International Number: 7164
+Chart Scale: 1:25,000
+Chart Title: Aden Harbour and Approaches
+Chart Status: Edition, Date: 2013-10-31
+
+Additional panels: none
+
+------------------------------------------------
+
+Chart Number: 9
+Chart International Number: 
+Chart Title: La Skhirra, Gabes and Ghannouch with Approaches
+Chart Status: New, Date: 1986-10-24
+
+Additional panels: 
+                         Panel 1 scale: 1:100000 (Gulf of Gabes)
+                         Panel 2 scale: 1:50000 (La Skhirra)
+                         Panel 3 scale: 1:30000 (Gabes and Ghannouch)
+
+------------------------------------------------

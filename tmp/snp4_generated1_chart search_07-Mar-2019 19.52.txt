@@ -1,0 +1,19 @@
+UKHO Standard Navigation Charts Catalogue, loaded from https://enavigator.ukho.gov.uk/Download/snc_catalogue.xml  
+
+Schema Version: 98.943.982Catalogue Date: 2018-11-11
+MD FileIdentifier: 45643563
+MD CharacterSet: 
+Organisation Name: The United Kingdom Hydrographic Office
+
+ContactInfo: 
+        Fax: +44 (0)1823 284077
+        Phone: +44 (0)1823 337900
+        Email: helpdesk@ukho.gov.uk
+
+Address: 
+         Delivery Point: Admiralty Way
+         City: Taunton
+         Administrative Area: IMT
+         Postal Code: TA1 2DN
+         Country: United Kingdom
+================================================= 

@@ -30,7 +30,8 @@ public class DownloadTask extends Task<Void> {
     protected Void call() throws Exception {
         String url = getUrlByIdJSOUP(downloadPageString);
         URLConnection connection = new URL(url).openConnection();
-        long fileLength = 19_858_062;  //connection.getContentLengthLong();
+      //the UKHO website doesn't send 'content-lenght' parameter
+        long fileLength = 19_858_062;  //connection.getContentLengthLong(); 
         
         System.out.println("fileLength " + fileLength);
 //        progressBox.show(0L, "Downloading Catalogue File...");
@@ -50,6 +51,9 @@ public class DownloadTask extends Task<Void> {
                 System.out.println("nread " + nread);
 //                progressBox.getLbl().setText("Downloaded: " + nread);
             }
+//        }catch(IOException e) {
+//        	e.printStackTrace();
+        	
         }
 
         return null;
@@ -57,7 +61,7 @@ public class DownloadTask extends Task<Void> {
 
     @Override
     protected void failed() {
-        System.out.println("failed");
+        System.out.println("download failed");
     }
 
     @Override

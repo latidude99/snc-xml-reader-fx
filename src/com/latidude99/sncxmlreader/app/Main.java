@@ -36,7 +36,7 @@ public class Main extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) throws IOException {
-		final String appName = "Standard Navigation Charts XML Reader v0.1";
+		final String appName = "Standard Navigation Charts XML Reader v1.0";
 		
 			Parent parent = (Parent) FXMLLoader.load(getClass().getResource("/com/latidude99/sncxmlreader/pane/MainPane.fxml"));
 			Scene scene = new Scene(parent);
